@@ -29,7 +29,8 @@ app.get('/api/play/:key', (req, res) => {
         res.status(206).header({
             'Content-Type': 'audio/mpeg',
             'Content-Length': contentLength,
-            'Content-Range': "bytes" + start + '-' + end + '/' + stat.size,
+            'Accept-Ranges': 'bytes',
+            'Content-Range': "bytes " + start + '-' + end + '/' + stat.size,
         });
 
         readStream = fs.createReadStream(path, {start, end});
