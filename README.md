@@ -7,4 +7,5 @@ Idea: Read the mp3 files and play them within single stream + client delivery
 
 * Create a core logic for stream merging
 * HLS or Partial Responses
+* Prepare media sources
 * Draft electon application
